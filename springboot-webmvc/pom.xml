@@ -9,10 +9,17 @@
   <groupId>com.poscodx</groupId>
   <artifactId>springboot-webmvc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
    <properties>
 		<java.version>21</java.version>
 	</properties>
-	<dependencies>		
+	<dependencies>	
+		<!-- springboot devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+			
 		<!-- springboot starter for web(mvc) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,9 +38,33 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- jstl-->
+  	<dependency>
+		<groupId>jakarta.el</groupId>
+		<artifactId>jakarta.el-api</artifactId>
+		<version>5.0.0</version>
+	</dependency>
+	<dependency>
+		<groupId>jakarta.servlet.jsp.jstl</groupId>
+		<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.glassfish.web</groupId>
+		<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+	</dependency>
+	
+		<!-- tomcat jasper -->
+	<dependency>
+	    <groupId>org.apache.tomcat.embed</groupId>
+	    <artifactId>tomcat-embed-jasper</artifactId>
+	    <scope>provided</scope>
+	</dependency>
+	
 	</dependencies>
 	
 	<build>
+		<finalName>springboot-webmvc</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

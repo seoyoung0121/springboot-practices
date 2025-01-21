@@ -21,9 +21,13 @@ public class WebMvcApplication {
 		
 		@GetMapping("/hello2")
 		public String hello2() {
-			return "hello";
+			return "th/hello";
 		}
 		
+		@GetMapping("/hello3")
+		public String hello3() {
+			return "/hello";
+		}
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(WebMvcApplication.class, args); //web일 때 try문 안됨
